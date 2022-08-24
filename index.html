@@ -4,7 +4,440 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto&display=swap"
+      rel="stylesheet"
+    />
+    <title>Stop the Investor</title>
+    <link rel="stylesheet" href="style.css" />
   </head>
-  <body></body>
+  <body id="body">
+    <embed
+      id="music"
+      src="assets/epic_battle_music_1-6275.mp3"
+      loop="true"
+      autostart="true"
+      hidden="true"
+    />
+    <section id="mainView" class="main section--active">
+      <div class="main_content">
+        <button class="btn_exit main__exit">
+          <img src="assets/exit.svg" alt="exit button" class="exit_svg" />
+        </button>
+        <div class="logoContainer">
+          <div class="logo">
+            <img src="assets/mainDecoration_1.svg" alt="" class="cloud_main" />
+            <div class="logo_part2">
+              <img
+                src="assets/mainDecoration_2.svg"
+                alt=""
+                class="decoration2_main"
+              />
+              <img
+                src="assets/logo_main.svg"
+                alt="game logo"
+                class="logoLarge"
+              />
+            </div>
+          </div>
+        </div>
+
+        <div id="buttons">
+          <button id="btn_about" class="btn btn_about">ABOUT</button>
+          <button id="btn_play" class="btn btn_play">PLAY</button>
+          <button id="btn_rules" class="btn btn_rules">RULES</button>
+        </div>
+        <div class="main_img">
+          <img
+            src="assets/scissers_main.svg"
+            alt="scissers vector img"
+            class="main__scissers svg"
+          />
+          <img
+            src="assets/rock_main.svg"
+            alt="rock vector img"
+            class="main__rock svg"
+          />
+          <img
+            src="assets/paper_main.svg"
+            alt="paper vector img"
+            class="main__paper svg"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="aboutView" class="about section--hidden">
+      <div class="about_header">
+        <img
+          src="assets/logo_small.svg"
+          alt="logo and name of the game"
+          class="svg logo_small"
+        />
+        <button class="btn_exit about_exit">
+          <img src="assets/exit.svg" alt="exit button" class="exit_svg" />
+        </button>
+        <img
+          src="assets/about_decorations_1.svg"
+          alt="logo and name of the game"
+          class="svg about_cloud"
+        />
+      </div>
+      <div class="about_text">
+        <div class="theSignificance">
+          <p class="about_p about_1">
+            The significance of this game is its use as a medium to convey a
+            strong message through elements of entertainment. <br />
+            <br />The goal of the game is to raise citizens awareness of
+            pressing problems, the importance of self-initiative, and readiness
+            to fight for a better tomorrow.
+          </p>
+          <h2 class="about_h2">
+            THE <br />
+            SIGNIFICANCE
+          </h2>
+        </div>
+        <div class="visualizeTheIdea">
+          <p class="about_p about_p2">
+            It encourages the individual that it is possible to initiate changes
+            in society as an individual and that it is important for the
+            community when we point out problems and want to fight and overcome
+            them, The Rock Paper Scissers game was used to visualize the idea.
+            This game is based on a non-hierarchical cyclical system and is
+            often used to make decisions.
+          </p>
+          <h2>
+            VISUALIZE THE <br />
+            IDEA
+          </h2>
+        </div>
+        <div class="theDevastationOfNature">
+          <p class="about_p">
+            The game maps the problem that occurs in the current system in our
+            region, where the devastation of nature, the ecosystem, and
+            endangering life is allowed regardless of the catastrophic
+            consequences. In such an enviroment where you do not have the
+            support of the state and the government, an individual has the power
+            to initiate change.
+          </p>
+          <h2>
+            THE DEVASTATION <br />
+            OF NATURE
+          </h2>
+        </div>
+        <div class="thinkingMultiplies">
+          <p class="about_p">
+            By the very act of playing, this way of thinking multiplies, which
+            helps the existence of critical thinking. While playing, the
+            individual has the opportunity to become a virtual actor of the
+            change advocated by the very idea of this game within the recursive
+            action.
+          </p>
+          <h2>
+            THINKING <br />
+            MULTIPLIES
+          </h2>
+        </div>
+      </div>
+      <div class="decorations">
+        <img
+          src="assets/about_decorations_2.svg"
+          alt=""
+          class="aboutDecoration2"
+        />
+        <img
+          src="assets/about_decorations_3.svg"
+          alt=""
+          class="aboutDecoration3"
+        />
+        <img
+          src="assets/about_decorations_4.svg"
+          alt=""
+          class="aboutDecoration4"
+        />
+        <img
+          src="assets/about_decorations_5.svg"
+          alt=""
+          class="aboutDecoration5"
+        />
+      </div>
+      <div class="about_img">
+        <img
+          src="assets/scissers_about.svg"
+          alt="scissers vector image"
+          class="svg"
+        />
+        <img src="assets/rock_about.svg" alt="rock vector image" class="svg" />
+        <img
+          src="assets/paper_about.svg"
+          alt="paper vector image"
+          class="svg"
+        />
+      </div>
+    </section>
+    <section id="rulesView" class="rules section--hidden">
+      <button class="btn_exit btn_back btnRules">
+        <img src="assets/exit.svg" alt="exit button" class="exit_svg" />
+      </button>
+      <div class="rulesContent">
+        <div class="pair">
+          <img
+            src="assets/paper_rules.svg"
+            alt="paper vector image"
+            class="svg"
+          />
+          <img src="assets/rulesDecoration_1.svg" alt="" class="rulesCloud1" />
+          <h1 class="vs">VS</h1>
+          <img
+            src="assets/lose.svg"
+            alt="scissers vector image"
+            class="svg losesvg"
+          />
+          <img
+            src="assets/rock_fliped.svg"
+            alt="rock vector image"
+            class="svg rockLose fliped"
+          />
+        </div>
+        <div class="pair">
+          <img
+            src="assets/rock_rules.svg"
+            alt="rock vector image"
+            class="svg"
+          />
+          <img src="assets/rulesDecoration_2.svg" alt="" class="rulesCloud2" />
+          <h1 class="vs">VS</h1>
+          <img
+            src="assets/lose.svg"
+            alt="scissers vector image"
+            class="svg losesvg"
+          />
+          <img
+            src="assets/scissers_fliped.svg"
+            alt="scissers vector image"
+            class="svg scissersLose fliped"
+          />
+        </div>
+        <div class="pair">
+          <img
+            src="assets/scissers_rules.svg"
+            alt="scissers vector image"
+            class="svg"
+          />
+          <img src="assets/rulesDecoration_3.svg" alt="" class="rulesCloud3" />
+          <h1 class="vs">VS</h1>
+          <img
+            src="assets/lose.svg"
+            alt="scissers vector image"
+            class="svg losesvg"
+          />
+          <img
+            src="assets/paper_fliped.svg"
+            alt="paper vector image"
+            class="svg paperLose fliped"
+          />
+        </div>
+      </div>
+    </section>
+    <section id="beforeBatlleView" class="beforeBattle section--hidden">
+      <button class="btn_exit beforeBatlle_exit">
+        <img src="assets/exit.svg" alt="exit button" class="exit_svg" />
+      </button>
+      <div class="bbContainer">
+        <div class="bbText1">
+          <p class="bbParagraph">
+            The state approved the investor to build 24 mini hydropower plants
+            on the territory of your country. There is a danger of catastrophic
+            consequences and endangering the environment. The investor has
+            already built 10. <br />
+            <br />
+            Your task is to try to stop the construction of the remaining ones
+            and demolish as many as possible in a limited time. You will do this
+            by simply competing in the game <br />
+            <b><span class="boldText">Rock Paper Scissers.</span> </b>
+          </p>
+        </div>
+        <img src="assets/beforeBatlleDecoration_2.svg" alt="" class="" />
+        <div class="bbText2">
+          <div class="text2_content">
+            <img
+              src="assets/beforeBatlleDecoration_1.svg"
+              alt=""
+              class="beforeBatlleDecoration"
+            />
+            <p class="bbParagraph">
+              Good luck in your fight for a better life and thank you endlessly
+              for your decision to help.
+            </p>
+          </div>
+        </div>
+        <button id="btn_next" class="btn btn_next">NEXT</button>
+      </div>
+    </section>
+    <section id="batlleView" class="batlle section--hidden">
+      <header class="batlleHeader">
+        <button id="backFromBatlle" class="btn_back btn_back-batlle clicked">
+          <img src="assets/back.svg" alt="back button" class="svg" />
+        </button>
+        <div class="results">
+          <div>
+            <h1 class="playerScore">
+              YOU
+              <span class="resultPlayer_score" data-player-score>0</span>
+            </h1>
+          </div>
+          <div>
+            <h1 class="investorScore">
+              INVESTOR
+              <span class="resultIvestor_score" data-investor-score>10</span>
+            </h1>
+          </div>
+        </div>
+        <p class="batlleTimer"><span class="timer">03:00</span></p>
+        <button id="bullteExit" class="btn_exit clicked">
+          <img src="assets/exit.svg" alt="exit button" class="exit_svg" />
+        </button>
+      </header>
+
+      <aside class="batlleSidebar">
+        <div class="removeInstall">
+          <div class="removeInstallheader">
+            <h2 class="mainText">Remove / Install</h2>
+            <p class="secondaryText">Mini hydropower plant</p>
+          </div>
+          <div
+            id="test3"
+            class="removeInstall_content"
+            data-remove-install
+          ></div>
+        </div>
+      </aside>
+      <main class="batlleMain">
+        <div class="batlle_weapons">
+          <img
+            src="assets/rock_batlle.svg"
+            alt="battle image"
+            class="your_batlle_weapon"
+          />
+          <img
+            src="assets/rock_batlle.svg"
+            alt="battle image"
+            class="investor_batlle_weapon"
+          />
+        </div>
+        <div class="results_weapon"></div>
+        <div class="results_weapon winner"></div>
+        <div id="weapontest" class="weapons">
+          <button class="weapon" data-weapon="scissers">
+            <img
+              src="assets/scissers_weapon.svg"
+              alt="scissers weapon vector image"
+              class=""
+            />
+          </button>
+          <button class="weapon" data-weapon="rock">
+            <img
+              src="assets/rock_weapon.svg"
+              alt="rock weapon vector image"
+              class="rock_weapon"
+            />
+          </button>
+          <button class="weapon" data-weapon="paper">
+            <img
+              src="assets/paper_weapon.svg"
+              alt="paper weapon vector image"
+              class=""
+            />
+          </button>
+        </div>
+        <h2 class="chose">CHOSE</h2>
+      </main>
+
+      <aside class="batlleSidebar2">
+        <div class="gameHistory">
+          <div class="gameHistory_header">
+            <h2>Game history</h2>
+          </div>
+          <div
+            class="gameHistory_content"
+            id="historyContent"
+            data-game-result
+          ></div>
+        </div>
+      </aside>
+    </section>
+    <section id="winPage" class="winPage section--hidden">
+      <div class="win_main">
+        <button id="winExit" onclick="hidePage();" class="btn_winExit clicked">
+          <img src="assets/exit.svg" alt="exit button" class="exit_svg" />
+        </button>
+        <div class="winTexts">
+          <p class="winText_main">
+            YOU WIN &amp; <br />
+            SAVE THE NATURE <br />
+            THANK YOU
+          </p>
+          <div id="winText" class="winText_secondary">
+            YOU DIDN'T ALLOW THE CONSTRUCTION OF 5 MINI HYDROPOWER PLANTS
+          </div>
+        </div>
+
+        <button onclick="hidePage();" class="btn playAgain clicked">
+          PLAY AGAIN
+        </button>
+      </div>
+      <div class="win_decoration">
+        <img src="assets/winDecoration_1.svg" alt="" class="winDecoration_1" />
+        <img src="assets/winDecoration_2.svg" alt="" class="winDecoration_2" />
+        <img src="assets/winDecoration_3.svg" alt="" class="winDecoration_3" />
+        <img src="assets/winDecoration_4.svg" alt="" class="winDecoration_4" />
+        <img src="assets/winDecoration_5.svg" alt="" class="winDecoration_5" />
+      </div>
+    </section>
+    <section id="losePage" class="losePage section--hidden">
+      <button id="loseExit" onclick="hidePage();" class="btn_loseExit clicked">
+        <img src="assets/exit.svg" alt="exit button" class="exit_svg" />
+      </button>
+      <div class="loseContent">
+        <div class="loseText_main">
+          YOU LOSE <br />
+          THERE IS NO LIFE <br />
+          WITHOUT WATER
+        </div>
+        <div class="loseText_secondary">
+          THE INVESTOR IS GOING TO DESTROY THE FLORA <br />
+          AND FAUNA IN RIVERS AND AROUND THEM!
+        </div>
+        <button onclick="hidePage();" class="btn playAgain clicked">
+          PLAY AGAIN
+        </button>
+      </div>
+
+      <div class="loseDecoration">
+        <img
+          src="assets/loseDecoration_1.svg"
+          alt=""
+          class="loseDecoration_1"
+        />
+        <img
+          src="assets/loseDecoration_2.svg"
+          alt=""
+          class="loseDecoration_2"
+        />
+        <img
+          src="assets/loseDecoration_3.svg"
+          alt=""
+          class="loseDecoration_3"
+        />
+        <img
+          src="assets/loseDecoration_4.svg"
+          alt=""
+          class="loseDecoration_4"
+        />
+      </div>
+    </section>
+    <style></style>
+    <script src="main.js"></script>
+  </body>
 </html>
