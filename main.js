@@ -7,26 +7,26 @@ let btnRules = document.querySelector("#btn_rules");
 let btnNext = document.querySelector("#btn_next");
 let btnAboutExit = document.querySelector(".about_exit");
 let btnBack = document.querySelector(".btn_back");
-let btnBackBatlle = document.querySelector(".btn_back-batlle");
+let btnBackBattle = document.querySelector(".btn_back-battle");
 const weaponButtons = document.querySelectorAll("[data-weapon]");
 let mainExit = document.querySelector(".main__exit");
 let winExit = document.querySelector(".btn_winExit");
 let loseExit = document.querySelector(".btn_loseExit");
-let btnExitBatlle = document.querySelector("#bullteExit");
+let btnExitBattle = document.querySelector("#battleExit");
 let clicked = document.querySelectorAll(".clicked");
 let playAgain = document.querySelectorAll(".playAgain");
-let beforeBatlleExit = document.querySelector(".beforeBatlle_exit");
+let beforeBattleExit = document.querySelector(".beforeBattle_exit");
 
 // views
-let beforeBatlleView = document.querySelector("#beforeBatlleView");
+let beforeBattleView = document.querySelector("#beforeBattleView");
 let mainView = document.querySelector("#mainView");
 let aboutView = document.querySelector("#aboutView");
 let rulesView = document.querySelector("#rulesView");
-let batlleView = document.querySelector("#batlleView");
+let battleView = document.querySelector("#battleView");
 
 // batlle img
-const yourBatlleWeapon = document.querySelector(".your_batlle_weapon");
-const investorBatlleWeapon = document.querySelector(".investor_batlle_weapon");
+const yourBattleWeapon = document.querySelector(".your_battle_weapon");
+const investorBattleWeapon = document.querySelector(".investor_battle_weapon");
 
 // winLose pages
 let displayWin = document.querySelector("#winPage");
@@ -57,8 +57,8 @@ function changeMusic() {
   let mainMusic = "assets/epic_battle_music_1-6275.mp3";
   let aboutMusic = "assets/ambients-for-rituals-05-114794.mp3";
   let rulesMusic = "assets/rulesMusic.mp3";
-  let beforeBatlleMusic = "assets/beforeBatlle.mp3";
-  let batlleMusic = "assets/hybrid-action-music-01-49709.mp3";
+  let beforeBattleMusic = "assets/beforeBattle.mp3";
+  let battleMusic = "assets/hybrid-action-music-01-49709.mp3";
   let winMusic = "assets/winmusic.mp3";
   let loseMusic = "assets/losemusic.mp3";
 
@@ -70,10 +70,10 @@ function changeMusic() {
     music.setAttribute("src", aboutMusic);
   } else if (rulesView.style.display != "none") {
     music.setAttribute("src", rulesMusic);
-  } else if (beforeBatlleView.style.display != "none") {
-    music.setAttribute("src", beforeBatlleMusic);
-  } else if (batlleView.style.display != "none") {
-    music.setAttribute("src", batlleMusic);
+  } else if (beforeBattleView.style.display != "none") {
+    music.setAttribute("src", beforeBattleMusic);
+  } else if (battleView.style.display != "none") {
+    music.setAttribute("src", battleMusic);
   } else if (displayWin.style.display != "none") {
     music.setAttribute("src", winMusic);
   } else if (displayLose.style.display != "none") {
@@ -110,21 +110,21 @@ const startGameTimer = function () {
 
 // Display View functions
 
-function displayBeforeBatlleView() {
-  beforeBatlleView.style.display = "flex";
+function displayBeforeBattleView() {
+  beforeBattleView.style.display = "flex";
   mainView.style.display = "none";
   aboutView.style.display = "none";
   rulesView.style.display = "none";
-  batlleView.style.display = "none";
+  battleView.style.display = "none";
   changeMusic();
 }
 
 function displayMainView() {
-  beforeBatlleView.style.display = "none";
+  beforeBattleView.style.display = "none";
   mainView.style.display = "block";
   aboutView.style.display = "none";
   rulesView.style.display = "none";
-  batlleView.style.display = "none";
+  battleView.style.display = "none";
   displayWin.style.display = "none";
 
   changeMusic();
@@ -134,30 +134,30 @@ function displayMainView() {
 function displayAboutView() {
   aboutView.classList.remove("section--hidden");
   mainView.classList.add("section--hidden");
-  beforeBatlleView.style.display = "none";
+  beforeBattleView.style.display = "none";
   mainView.style.display = "none";
   aboutView.style.display = "grid";
   rulesView.style.display = "none";
-  batlleView.style.display = "none";
+  battleView.style.display = "none";
   changeMusic();
 }
 
 function displayRulesView() {
-  beforeBatlleView.style.display = "none";
+  beforeBattleView.style.display = "none";
   mainView.style.display = "none";
   aboutView.style.display = "none";
   rulesView.style.display = "block";
-  batlleView.style.display = "none";
+  battleView.style.display = "none";
   changeMusic();
 }
 
-function displayBatlleView() {
+function displayBattleView() {
   //batlleView.classList.remove("section--hidden");
-  beforeBatlleView.style.display = "none";
+  beforeBattleView.style.display = "none";
   mainView.style.display = "none";
   aboutView.style.display = "none";
   rulesView.style.display = "none";
-  batlleView.style.display = "grid";
+  battleView.style.display = "grid";
   displayWin.style.display = "none";
   changeMusic();
   addRemoveInstallContent();
@@ -167,16 +167,16 @@ function displayBatlleView() {
 }
 
 // listeners
-btnPlay.addEventListener("click", displayBeforeBatlleView);
+btnPlay.addEventListener("click", displayBeforeBattleView);
 btnAbout.addEventListener("click", displayAboutView);
 btnRules.addEventListener("click", displayRulesView);
-btnNext.addEventListener("click", displayBatlleView);
+btnNext.addEventListener("click", displayBattleView);
 btnAboutExit.addEventListener("click", displayMainView);
 btnBack.addEventListener("click", displayMainView);
-btnBackBatlle.addEventListener("click", displayBeforeBatlleView);
+btnBackBattle.addEventListener("click", displayBeforeBattleView);
 mainExit.addEventListener("click", closeWindow);
-btnExitBatlle.addEventListener("click", displayMainView);
-beforeBatlleExit.addEventListener("click", displayMainView);
+btnExitBattle.addEventListener("click", displayMainView);
+beforeBattleExit.addEventListener("click", displayMainView);
 
 const Weapons = [
   {
@@ -199,8 +199,8 @@ weaponButtons.forEach((weaponButton) => {
     const investorWeaponName = randomWeapon().name;
     choseWeapon(weapon);
 
-    yourBatlleWeapon.src = `assets/${weapon.name}_batlle.svg`;
-    investorBatlleWeapon.src = `assets/${investorWeaponName}_batlle.svg`;
+    yourBattleWeapon.src = `assets/${weapon.name}_battle.svg`;
+    investorBattleWeapon.src = `assets/${investorWeaponName}_battle.svg`;
   });
 });
 let playerWinner;
@@ -401,7 +401,7 @@ function checkWinner() {
 }
 
 function displayWinPage() {
-  batlleView.style.display = "none";
+  battleView.style.display = "none";
   displayWin.classList.remove("section--hidden");
   displayWin.style.display = "flex";
   document.getElementById(
@@ -412,7 +412,7 @@ function displayWinPage() {
   confetti();
 }
 function displayLosePage() {
-  batlleView.style.display = "none";
+  battleView.style.display = "none";
   displayLose.classList.remove("section--hidden");
   document.body.style.background = "#B33951";
   changeMusic();
@@ -439,18 +439,18 @@ const returnValue = function () {
   gameHistory.replaceChildren();
   returnRemoveInstallValue();
   clearInterval(timer);
-  returnBatlleWeapons();
+  returnBattleWeapons();
 };
 
-const returnBatlleWeapons = function () {
+const returnBattleWeapons = function () {
   let yourWeapon = document.getElementById("yw");
-  yourWeapon.setAttribute("src", "assets/rock_batlle.svg");
+  yourWeapon.setAttribute("src", "assets/rock_battle.svg");
   let investorWeapon = document.getElementById("iw");
-  investorWeapon.setAttribute("src", "assets/rock_batlle.svg");
+  investorWeapon.setAttribute("src", "assets/rock_battle.svg");
 };
 
 document
-  .getElementById("backFromBatlle")
+  .getElementById("backFromBattle")
   .addEventListener("click", returnValue);
 
 const returnRemoveInstallValue = function () {
@@ -471,7 +471,7 @@ loseExit.addEventListener("click", () => {
 
 clicked.forEach((click) => click.addEventListener("click", returnValue));
 playAgain.forEach((playagain) =>
-  playagain.addEventListener("click", displayBatlleView)
+  playagain.addEventListener("click", displayBattleView)
 );
 
 const showAndHideWinPage = function () {

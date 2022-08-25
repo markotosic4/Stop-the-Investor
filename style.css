@@ -137,7 +137,7 @@ button {
   transform: scale(1.1);
 }
 
-.investor_batlle_weapon {
+.investor_battle_weapon {
   transform: rotateY(180deg);
 }
 
@@ -165,7 +165,7 @@ button {
   background: "#b33951";
 }
 
-.batlleTimer {
+.battleTimer {
   margin: 2px;
 }
 
@@ -248,8 +248,8 @@ button {
 }
 
 /*///////////////////////////////////////////
-// BEFORE BATLLE*/
-#beforeBatlleView {
+// BEFORE BATTLE*/
+#beforeBattleView {
   /*display: flex;*/
   flex-direction: column;
 }
@@ -260,7 +260,7 @@ button {
   align-items: center;
 }
 
-.beforeBatlle_exit {
+.beforeBattle_exit {
   display: flex;
   justify-content: flex-end;
 }
@@ -298,7 +298,7 @@ button {
   top: 533px;
   padding-left: 12px;
 }
-.beforeBatlleDecoration {
+.beforeBattleDecoration {
   padding-right: 149.5px;
 
   padding-bottom: 47.5px;
@@ -312,7 +312,7 @@ button {
 
 /*///////////////////////////////////////////////
 // BATLLE PAGE*/
-#batlleView {
+#battleView {
   display: none;
   grid-template-columns: repeat(3, 1fr);
   grid-template-areas:
@@ -323,29 +323,29 @@ button {
   row-gap: 50px;
   align-items: end;
 }
-.batlleHeader {
+.battleHeader {
   grid-area: header;
   grid-template-columns: repeat(12, 1fr);
   display: grid;
   grid-auto-flow: column;
 }
-.batlleSidebar {
+.battleSidebar {
   display: grid;
   justify-content: center;
   grid-area: sidebar;
 }
-.batlleMain {
+.battleMain {
   grid-area: main;
   display: grid;
   justify-content: center;
 }
-.batlleSidebar2 {
+.battleSidebar2 {
   grid-area: sidebar2;
   display: grid;
   justify-content: center;
 }
 
-.batlleSidebar2 {
+.battleSidebar2 {
   display: flex;
 }
 .gameHistory_header {
@@ -384,7 +384,7 @@ button {
   align-items: center;
 }
 
-#backFromBatlle {
+#backFromBattle {
   display: grid;
   position: relative;
   top: 20px;
@@ -402,7 +402,7 @@ button {
   justify-content: space-evenly;
 }
 
-#bullteExit {
+#battleExit {
   grid-column-start: 12;
   display: grid;
   justify-content: end;
@@ -410,7 +410,7 @@ button {
   top: 20px;
 }
 
-.batlleTimer {
+.battleTimer {
   display: grid;
   grid-column-start: 10;
   grid-column-end: 12;
@@ -433,11 +433,11 @@ button {
   align-items: center;
 }
 
-.batlleMain {
+.battleMain {
   justify-items: center;
 }
 
-.batlle_weapons {
+.battle_weapons {
   gap: 161px;
   display: grid;
   grid-auto-flow: column;
