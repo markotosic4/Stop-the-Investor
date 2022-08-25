@@ -419,7 +419,7 @@ function displayLosePage() {
 }
 
 function closeWindow() {
-  window.close();
+  window.open("", "_self").window.close();
 }
 
 function hidePage() {
