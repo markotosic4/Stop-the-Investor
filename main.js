@@ -99,7 +99,7 @@ const startGameTimer = function () {
     time--;
   };
 
-  let time = 30;
+  let time = 90;
 
   tick();
   const timer = setInterval(tick, 1000);
@@ -439,6 +439,14 @@ const returnValue = function () {
   gameHistory.replaceChildren();
   returnRemoveInstallValue();
   clearInterval(timer);
+  returnBatlleWeapons();
+};
+
+const returnBatlleWeapons = function () {
+  let yourWeapon = document.getElementById("yw");
+  yourWeapon.setAttribute("src", "assets/rock_batlle.svg");
+  let investorWeapon = document.getElementById("iw");
+  investorWeapon.setAttribute("src", "assets/rock_batlle.svg");
 };
 
 document
