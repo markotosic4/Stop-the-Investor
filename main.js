@@ -59,6 +59,8 @@ function changeMusic() {
   let rulesMusic = "assets/rulesMusic.mp3";
   let beforeBatlleMusic = "assets/beforeBatlle.mp3";
   let batlleMusic = "assets/hybrid-action-music-01-49709.mp3";
+  let winMusic = "assets/winmusic.mp3";
+  let loseMusic = "assets/losemusic.mp3";
 
   let music = document.getElementById("music");
 
@@ -72,6 +74,10 @@ function changeMusic() {
     music.setAttribute("src", beforeBatlleMusic);
   } else if (batlleView.style.display != "none") {
     music.setAttribute("src", batlleMusic);
+  } else if (displayWin.style.display != "none") {
+    music.setAttribute("src", winMusic);
+  } else if (displayLose.style.display != "none") {
+    music.setAttribute("src", loseMusic);
   }
 }
 changeMusic();
@@ -93,7 +99,7 @@ const startGameTimer = function () {
     time--;
   };
 
-  let time = 90;
+  let time = 30;
 
   tick();
   const timer = setInterval(tick, 1000);
@@ -402,11 +408,14 @@ function displayWinPage() {
     "winText"
   ).innerHTML = `YOU DIDN'T ALLOW THE CONSTRUCTION <br> OF ${playerScore.innerText} MINI HYDROPOWER PLANTS`;
   document.body.style.background = "#63cdc7";
+  changeMusic();
+  confetti();
 }
 function displayLosePage() {
   batlleView.style.display = "none";
   displayLose.classList.remove("section--hidden");
   document.body.style.background = "#B33951";
+  changeMusic();
 }
 
 function closeWindow() {
