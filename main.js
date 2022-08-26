@@ -181,14 +181,14 @@ beforeBattleExit.addEventListener("click", displayMainView);
 const Weapons = [
   {
     name: "rock",
-    beats: "scissers",
+    beats: "scissors",
   },
   {
     name: "paper",
     beats: "rock",
   },
   {
-    name: "scissers",
+    name: "scissors",
     beats: "paper",
   },
 ];
