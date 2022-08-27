@@ -81,6 +81,9 @@ function changeMusic() {
   }
 }
 changeMusic();
+window.addEventListener("load", function () {
+  document.getElementById("mainView").style.display = "block";
+});
 //////////////////////////////////////////////
 //////////////////////////////////////////////
 // TIMER
