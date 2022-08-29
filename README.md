@@ -52,3 +52,17 @@ win
 
 lose
 ![](UI_UX_DESIGN/lose.png)
+
+## I use JavaScript Confetti library from
+https://www.npmjs.com/package/js-confetti
+
+```js
+const jsConfetti = new JSConfetti();
+
+function confetti() {
+  jsConfetti.addConfetti({
+    confettiRadius: 8,
+    confettiNumber: 500,
+  });
+}
+```
