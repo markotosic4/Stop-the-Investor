@@ -26,6 +26,9 @@ By the very act of playing, this way of thinking multiplies, which helps the exi
 * CSS3
 * JavaScript
 
+## Live Demo
+[STOP THE INVESTOR](https://markotosic4.github.io/Stop-the-Investor/)
+
 ## UI/UX Design
 In the beginning, I was researching on the internet for solutions for some kind of UI/UX Design for my game, and none of the solutions was good enough for me to use for implementation. So, I take this opportunity to make my own UI/UX Design and not follow current practices that you can see on the internet.
 
